@@ -1,6 +1,11 @@
+import os
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
+
+# Get Hugging Face credentials from environment variables
+hf_email = os.getenv('HF_EMAIL')
+hf_password = os.getenv('HF_PASSWORD')
 
 # App title
 st.set_page_config(page_title="🤗💬 HugChat")
